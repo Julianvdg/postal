@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
     
     has_many :posts
+    
+    def handle
+        self.email.split('@')[0]
+    end
+    
 end
